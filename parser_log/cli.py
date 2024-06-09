@@ -73,8 +73,8 @@ def parse(filename:str) -> None:
 @app.command()
 def selective_parse(
     filename : str,
-    ip : str = "",
-    code : str = ""
+    ip : str = typer.Option("",help="search all details of a ip"),
+    code : str = typer.Option("",help="filter on basis of response code")
     
 
 ):  
